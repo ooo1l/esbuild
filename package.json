@@ -1,0 +1,30 @@
+{
+  "name": "codespaces-blank",
+  "version": "1.0.0",
+  "description": "about esbuild",
+  "main": "index.js",
+  "scripts": {
+    "esbuild-outfile": "esbuild simple-demo/index.ts --outfile=simple-demo/output.js --bundle --loader:.ts=ts",
+    "esbuild:simple-demo": "esbuild simple-demo/index.ts",
+    "esbuild-bundle:simple-demo": "esbuild simple-demo/index.ts --bundle",
+    "esbuild-bundle-outfile:react-demo": "esbuild react-demo/App.js --bundle --outfile=react-demo/AppBundle.js --loader:.js=jsx",
+    "esbuild:esbuild-api-demo": "node esbuild-api-demo/build.js",
+    "esbuild:css-demo": "esbuild css-demo/style.css --outfile=css-demo/out.css --bundle",
+    "esbuild-minify:css-demo": "esbuild css-demo/style.css --outfile=css-demo/out.css --bundle --minify",
+    "esbuild:esbuild-plugin-demo": "node esbuild-plugin-demo/sass_build.js",
+    "esbuild:esbuild-watch-mode-demo": "node esbuild-watch-mode-demo/watch_build.js",
+    "esbuild:esbuild-serve-mode-demo": "esbuild esbuild-serve-mode-demo/input_typescript.ts --outfile=esbuild-serve-mode-demo/output.js --bundle --loader:.ts=ts --serve=localhost:8000 --servedir=."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.17.12",
+    "esbuild-plugin-sass": "^1.0.1",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
